@@ -14,6 +14,6 @@ public class exercicio5 {
         double porcentagem = ((0.1)*vJantar);
 
         System.out.println("valor do jantar sai por " + vJantar + " com os 10% sai por " + (porcentagem + vJantar) );
-        
+        entrada.close();
     }
 }
