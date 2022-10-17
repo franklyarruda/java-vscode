@@ -14,5 +14,7 @@ public class atividade {
         System.out.println("A soma dos números é " + soma);
 
         entrada.close();
+           
+        
     }
 }
