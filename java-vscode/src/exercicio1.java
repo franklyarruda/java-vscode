@@ -17,6 +17,7 @@ public class exercicio1 {
         }else{
             System.out.println("aluno reprovado ");
         }
+        entrada.close();
     }
     
 }

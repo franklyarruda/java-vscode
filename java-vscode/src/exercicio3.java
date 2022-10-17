@@ -10,6 +10,6 @@ System.out.println("qual seu nome ");
 String nome = entrada.nextLine();
 
 System.out.println("Olá " + nome);
-
+entrada.close();
     }
 }

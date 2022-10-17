@@ -15,8 +15,9 @@ public static void main(String[] args) {
     System.out.println("numero atual" + (numero = numero + 1 ));
 
     System.out.println("proximo numero " + (numero = numero + 2));
-
+entrada.close();
 }
+
 
 
 }
