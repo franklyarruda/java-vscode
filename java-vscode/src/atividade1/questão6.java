@@ -38,5 +38,6 @@ public class questão6 {
         }if(imc > 40){
             System.out.println(" Obesidade Morbida "+ imc );
         }
+        entrada.close();
     }
 }
