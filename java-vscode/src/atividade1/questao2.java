@@ -19,29 +19,31 @@ public class questao2 {
         int numeroMaior = 0;
         int numeroMenor = 0;
 
-        if ((numero1 > numero2) && (numero1 > numero3)) {
+        if ((numero1 >= numero2) && (numero1 >= numero3)) {
             numeroMaior = numero1;
         }
-        if ((numero1 < numero2) && (numero1 < numero3)) {
+        if ((numero1 <= numero2) && (numero1 <= numero3)) {
             numeroMenor = numero1;
             
 
-        } else if ((numero2 > numero1) && (numero2 > numero3)) {
+        }  if ((numero2 >= numero1) && (numero2 >= numero3)) {
             numeroMaior = numero2;
         }
-        if ((numero2 < numero1) && (numero2 < numero3)) {
+        if ((numero2 <= numero1) && (numero2 <= numero3)) {
             numeroMenor = numero2;
            
 
-        } else if ((numero3 > numero1) && (numero3 > numero2)) {
+        }  if ((numero3 >= numero1) && (numero3 >= numero2)) {
             numeroMaior = numero3;
-            if((numero3 < numero1) && (numero3 < numero2)){
+        }
+            if((numero3 <= numero1) && (numero3 <= numero2)){
                 numeroMenor = numero3;
             }
+            System.out.println("O número " + numeroMaior + " é maior e o numero " + numeroMenor + " e o menor ");
+            entrada.close();
         }
-        System.out.println("O número " + numeroMaior + " é maior e o numero " + numeroMenor + " e o menor ");
+    
         
-
     }
 
-}
+
