@@ -21,9 +21,12 @@ public class questao5 {
         }else{
              menor= menor + 1;
         }
+        entrada.close();
     }
     
     System.out.println("são " + maior + " de maior e " + menor + " de menor" );
+    
 
     }
+    
 }

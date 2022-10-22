@@ -24,7 +24,7 @@ public class questao3 {
             System.out.println();
             System.out.println(i);
           }
-          
+     entrada.close();     
     }
 
     }

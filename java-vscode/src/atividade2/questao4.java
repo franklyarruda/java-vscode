@@ -19,7 +19,7 @@ public class questao4 {
         }if(!palavra.equals("Java-2022")){
             System.out.println("resposta errada voce tem " + (i-1) + " tentativas");
         }
-        
+        entrada.close();
     }
     
     }
