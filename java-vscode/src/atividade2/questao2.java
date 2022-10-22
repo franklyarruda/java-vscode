@@ -16,6 +16,6 @@ public class questao2 {
         for(int i = 0; i < repetir ; i++ ){
             System.out.println(mensagem);
         }
-
+        entrada.close();
     }
 }
