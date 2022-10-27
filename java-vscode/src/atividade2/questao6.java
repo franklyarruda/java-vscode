@@ -10,7 +10,7 @@ public class questao6 {
         // mostrar o maior o menor a soma e a média dos números digitados.
 
         int maior = 0;
-        int menor = 0;
+        int menor = 110;
         int soma = 0;
         int media = 0;
         
@@ -23,10 +23,10 @@ public class questao6 {
 
             if (n1 > maior) {
                 maior = n1;
-                menor = n1;
                 System.out.println("maior " + maior);
                 
             }
+            
             if (n1 < menor) {
                 menor = n1;
                 System.out.println("menor " + menor);
