@@ -10,7 +10,9 @@ public class exemplo03 {
          ArrayList<String> lista = new ArrayList<String>();
          int selecionado = 0;
          Object[] opcoes = { "Incluir", "Listar", "Apagar","Alterar", "Finalizar" };
+        
          do {
+            try{
              selecionado = JOptionPane.showOptionDialog(
                      null,
                      "O que você deseja?",
@@ -19,17 +21,24 @@ public class exemplo03 {
                      JOptionPane.WARNING_MESSAGE,
                      null, opcoes, opcoes[0]);
              if (selecionado == 0) { // opcoes[selecionado].equals("Incluir")
-                 String item = JOptionPane.showInputDialog("Digite");
-                 lista.add(item); // guarda na lista o item digitado
+             
+             String item = JOptionPane.showInputDialog("Digite");
+             if(item != null){
+             lista.add(item); // guarda na lista o item digitado
              }
+            }
              if (selecionado == 1) {
                  String msg = "";
                  for (String item : lista) {
                      msg += item + "\n";
                  }
+                 if(msg.equals("")){
+                    msg = "Lista vazia";
+                 }
+
                  JOptionPane.showMessageDialog(null, msg);
              }
-             if (selecionado == 2) {
+             if (selecionado == 2 && lista.size() > 0) {
                  Object[] opcaoApagar = new Object[lista.size()];
                  for (int i = 0; i < opcaoApagar.length; i++) {
                      opcaoApagar[i] = lista.get(i);
@@ -45,12 +54,12 @@ public class exemplo03 {
                          opcaoApagar[0]);
                  // System.out.println(itemSelecionado.toString());
                  for (int i = 0; i < lista.size(); i++) {
-                     if (itemSelecionado.toString().equals(lista.get(i))) {
+                     if (itemSelecionado != "null" && itemSelecionado.toString().equals(lista.get(i))) {
                          lista.remove(i);
                      }
                  }
              }
-             if(selecionado == 3){
+             if(selecionado == 3 && lista.size() > 0){
                 Object[] opcaoAlterar = new Object[lista.size()];
                 for (int i = 0; i< opcaoAlterar.length; i++){
                     opcaoAlterar[i] = lista.get(i);
@@ -66,14 +75,17 @@ public class exemplo03 {
                     opcaoAlterar[0]);
                     // System.out.println(itemSelecionado.toString());
                     for (int i = 0; i < lista.size(); i++) {
-                        if (itemSelecionado.toString().equals(lista.get(i))) {
-                    String alt = JOptionPane.showInputDialog("Digite a alteração ");
+                        if (itemSelecionado != "null" && itemSelecionado.toString().equals(lista.get(i))) {
+                    String alt = JOptionPane.showInputDialog("Digite a alteração ", lista.get(i));
                     lista.set(i, alt);
                 }
 
              }
             }
-         } while (selecionado != 4);
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "try c");
+        }
+         } while (selecionado != 4 && selecionado != -1);
  
     }
 }
