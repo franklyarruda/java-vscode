@@ -45,7 +45,7 @@ public class exemplo03 {
                          opcaoApagar[0]);
                  // System.out.println(itemSelecionado.toString());
                  for (int i = 0; i < lista.size(); i++) {
-                     if (itemSelecionado.toString().equals(lista.set(i, "teste"))) {
+                     if (itemSelecionado.toString().equals(lista.get(i))) {
                          lista.remove(i);
                      }
                  }
